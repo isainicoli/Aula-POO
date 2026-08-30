@@ -1,4 +1,3 @@
-package br.pucrs.poo;
 
 public class ClientePJ extends Cliente {
    private String cnpj;

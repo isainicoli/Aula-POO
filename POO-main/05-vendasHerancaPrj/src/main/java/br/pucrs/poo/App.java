@@ -35,8 +35,8 @@ public class App {
         // teste de criação de clientes
         Produto p1 = new Produto(1, "caneta azul", 2);
         Produto p2 = new Produto(2, "borracha", 1.5);
-        Produto p3 = new Produto(3, "lápis", 1);
-        Produto p4 = new Produto(4, "Chocolate", 10);
+        //Produto p3 = new Produto(3, "lápis", 1);
+        //Produto p4 = new Produto(4, "Chocolate", 10);
 
         //System.out.println(p1.toString());
         //System.out.println(p4);

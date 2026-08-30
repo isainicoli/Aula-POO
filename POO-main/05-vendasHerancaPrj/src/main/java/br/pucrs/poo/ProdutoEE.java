@@ -1,3 +1,4 @@
+package br.pucrs.poo;
 
 public class ProdutoEE extends Produto{
     private int diasGarantia;

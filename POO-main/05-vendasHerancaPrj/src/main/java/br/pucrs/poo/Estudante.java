@@ -1,3 +1,4 @@
+package br.pucrs.poo;
 
 public class Estudante extends ClientePF {
    private String instituicao;

@@ -1,3 +1,4 @@
+package br.pucrs.poo;
 
 public abstract class Cliente {
     private int codigo;

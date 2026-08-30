@@ -13,6 +13,6 @@ public class ProdutoAlc extends Produto{
 
     @Override
     public String toString (){
-        return super.toString();
+        return "!!Produto com taxa-trago!! \n" + super.toString();
     }
 }

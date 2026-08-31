@@ -88,6 +88,18 @@ public class App {
         System.out.println("\n\nPróxima venda será a de número: " +
                 Venda.getProxNF());
 
+        ProdutoEE eletronico = new ProdutoEE(101, " Notebook ", 5500.00, 365);
+        ProdutoAlc bebida = new ProdutoAlc(401, " Vinho tinto seco ", 70.00);
+
+        double precoComTaxa = ProdutoAlc.taxaTrago(50.00);
+
+        System.out.println("-----------------------------------");
+        System.out.println(eletronico);
+        System.out.println("Garantia do eletrônico - " + eletronico.getGarantia() + " dias");
+        System.out.println("-----------------------------------");
+        System.out.println(bebida);
+        System.out.println("Preço com taxa-trago - " + precoComTaxa);
+
         // System.out.println("\n\n");
 
         // Venda v1 = new Venda(c1);

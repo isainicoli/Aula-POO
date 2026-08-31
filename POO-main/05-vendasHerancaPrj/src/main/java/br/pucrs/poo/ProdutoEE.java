@@ -14,6 +14,6 @@ public class ProdutoEE extends Produto{
 
     @Override
     public String toString (){  
-        return super.toString() + "Dias de garantia: " + this.diasGarantia;
+        return super.toString();
     }
 }

@@ -1,27 +1,35 @@
 package br.pucrs.poo;
 
 public class ProdutoAlc extends Produto{
-    private double taxaTrago;
+     private static double impostoAlcool = 4.0;
 
-    public ProdutoAlc(int umCodigo, String umNome, double umPreco, double umaTaxa){
+    public ProdutoAlc(int umCodigo, String umNome, double umPreco) {
         super(umCodigo, umNome, umPreco);
-        this.taxaTrago = umaTaxa;
-    }
-    
-    public double getTaxaTrago(){
-        return this.taxaTrago;
-    } 
-    
-    public void setTaxaTrago(double umaTaxa){
-        this.taxaTrago = umaTaxa;
     }
 
-    public static double adicionaTaxa (double umPreco, double umaTaxa){
-        return umPreco + (umaTaxa * (umPreco));
+    public static double getImpostoAlcool() {
+        return impostoAlcool;
+    }
+
+    public static void setImpostoAlcool(double novoImposto) {
+        impostoAlcool = novoImposto;
     }
 
     @Override
-    public String toString (){
-        return super.toString();
+    public double getPreco() {
+        return super.getPreco() + (super.getPreco() * impostoAlcool);
+    }
+
+   @Override
+    public String toString() {
+    return String.format(
+            "%s\n" +
+            "Preço base- R$ %.2f\n" +
+            "Imposto sobre álcool- %.2f%%\n" +
+            "Preço com imposto- R$ %.2f",
+            super.toString(),
+            super.getPreco(),
+            impostoAlcool * 100,
+            getPreco());
     }
 }

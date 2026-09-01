@@ -22,16 +22,10 @@ public abstract class Cliente {
         return codigo;
     }
 
+    public abstract String getID();
+
     @Override
     public String toString() {
-        /*
-         * return "Cliente{" +
-         * "codigo=" + codigo +
-         * ", nome='" + nome + '\'' +
-         * '}';
-         */
-        
         return String.format("(%d) \t %s", codigo, nome);
-            }
-
+    }
 }

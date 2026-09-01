@@ -1,3 +1,4 @@
+package br.pucrs.poo;
 
 public class ClientePJ extends Cliente {
    private String cnpj;
@@ -7,7 +8,14 @@ public class ClientePJ extends Cliente {
     this.cnpj = umCNPJ;
   }
 
-  public String getCNPJ() { return cnpj; }
+  public String getCNPJ() { 
+    return cnpj; 
+  }
+
+  @Override
+    public String getID() {
+        return cnpj;
+    }
 
   @Override
   public String toString() {
@@ -15,6 +23,4 @@ public class ClientePJ extends Cliente {
     return super.toString() + " [cnpj = " + cnpj + "]";
   }
 
-
-  
 }

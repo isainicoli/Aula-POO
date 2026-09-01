@@ -1,3 +1,4 @@
+package br.pucrs.poo;
 
 public class Produto {
 
@@ -29,10 +30,9 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
-                "codigo=" + getCodigo() +
-                ", nome='" + getNome() + '\'' +
-                ", preco='" + getPreco() + '\'' +
-                '}';
+        return "Produto: " +
+                "\nCódigo: " + getCodigo() +
+                "\nNome: " + getNome() + 
+                "\nPreço: " + getPreco();
     }
 }

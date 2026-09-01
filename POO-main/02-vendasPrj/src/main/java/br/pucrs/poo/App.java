@@ -18,6 +18,7 @@ public class App {
         cadCli.inserir(127, "Tio Patinhas");
 
         CadastroClientes outroCad = CadastroClientes.getInstance();
+        System.out.println("mesmo cadastro? " + (cadCli == outroCad));
         System.out.println(cadCli);
 
         CadastroProdutos cadProd = CadastroProdutos.getInstance();
@@ -29,6 +30,7 @@ public class App {
         Produto p4 = new Produto(4, "Chocolate", 10);
 
         System.out.println(p1.toString());
+        System.out.println(p3);
         System.out.println(p4);
 
         cadProd.inserir(1, "caneta azul", 2);

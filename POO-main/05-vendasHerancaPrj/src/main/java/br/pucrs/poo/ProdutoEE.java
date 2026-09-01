@@ -1,18 +1,31 @@
+package br.pucrs.poo;
+
+import java.time.LocalDate;
 
 public class ProdutoEE extends Produto{
     private int diasGarantia;
 
-    public ProdutoEE (int umCodigo, String umNome, double umPreco, int diasGarantia){
+    public ProdutoEE(int umCodigo, String umNome, double umPreco, int diasGarantia) {
         super(umCodigo, umNome, umPreco);
         this.diasGarantia = diasGarantia;
     }
 
-    public int getGarantia(){
-        return diasGarantia;
+    public String getGarantia() {
+        LocalDate dataAtual = LocalDate.now();
+        LocalDate dataVencimento = dataAtual.plusDays(diasGarantia);
+
+        return String.format(
+                "Dias de garantia- %d\n" +
+                "Data atual- %s\n" +
+                "Data de vencimento- %s",
+                diasGarantia,
+                dataAtual,
+                dataVencimento
+        );
     }
 
     @Override
-    public String toString (){  
-        return super.toString() + "Dias de garantia: " + this.diasGarantia;
+    public String toString() {
+        return super.toString();
     }
 }
